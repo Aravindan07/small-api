@@ -1,4 +1,4 @@
-var PORT_NO = process.env.PORT || 8080;
+var PORT = process.env.PORT || 8080;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -32,4 +32,4 @@ mongoose.connect(
 );
 
 //Listening Port
-app.listen(PORT_NO);
+app.listen(PORT);
