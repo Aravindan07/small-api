@@ -7,8 +7,8 @@ const cors = require("cors");
 require("dotenv/config");
 
 //Middlewares
-app.use(cors());
 app.use(bodyParser.json());
+app.use(cors());
 
 //Import Routes
 const postRoutes = require("./routes/posts");
@@ -16,7 +16,7 @@ const postRoutes = require("./routes/posts");
 //Middlewares
 app.use("/posts", postRoutes);
 
-ROUTES;
+//ROUTES
 app.get("/", (req, res) => {
   res.send("We are on the Home Page");
 });
@@ -24,7 +24,7 @@ app.get("/", (req, res) => {
 //Connect to MongoDB
 
 mongoose.connect(
-  process.env.MONGODB_URI || process.env.DB_CONNECT,
+  process.env.DB_CONNECT,
   { useNewUrlParser: true, useUnifiedTopology: true },
   () => {
     console.log("Connected to DB");
