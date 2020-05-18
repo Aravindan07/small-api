@@ -14,12 +14,12 @@ app.use(bodyParser.json());
 const postRoutes = require("./routes/posts");
 
 //Middlewares
-app.use("/", postRoutes);
+app.use("/posts", postRoutes);
 
-//ROUTES
-// app.get("/", (req, res) => {
-//   res.send("We are on the Home Page");
-// });
+ROUTES;
+app.get("/", (req, res) => {
+  res.send("We are on the Home Page");
+});
 
 //Connect to MongoDB
 
